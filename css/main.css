@@ -96,10 +96,10 @@ textarea {
    ========================================================================== */
 
 #wrapper > div {
-    width: 100%;
     min-height: 400px;
     position: relative;
     top: 0;
+    min-width: 960px;
 }
 
 .container {
@@ -202,12 +202,12 @@ h1#title {
 
 .countdown-wrapper div p:nth-child(2) {
     position: relative;
-    -webkit-transition: all .5s ease;
+    -webkit-transition: all 1s ease;
     font-size: 3.5em;
     z-index: 5;
 }
 
-.scroll-animate {
+.scroll-animation {
     -webkit-animation: scroll 1s infinite;
 }
 
@@ -249,7 +249,7 @@ h1#title {
 
 .venue-wrapper {
     font-family: 'Vollkorn', serif;
-    padding: 100px 0;
+    padding: 150px 0;
 }
 
 .venue-details {
@@ -350,6 +350,7 @@ h1#title {
     margin: 0px auto;
     text-align: center;
     font-family: 'Vollkorn', serif;
+    display: none;
 }
 
 #rsvp-no, #rsvp-yes span.loud {
@@ -366,8 +367,9 @@ h1#title {
 }
 
 #rsvp-yes {
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 
+    display: none;
 }
 
 #rsvp-yes form {
