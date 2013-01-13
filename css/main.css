@@ -32,12 +32,12 @@ body {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #FC0;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #FC0;
     text-shadow: none;
 }
 
@@ -109,7 +109,7 @@ textarea {
 }
 
 .title-wrapper {
-    padding: 150px 0;
+    padding: 50px 0 175px;
     background: #BB292D;
     text-align: center;
     font-family: 'Open Sans', sans-serif;
@@ -172,6 +172,7 @@ h1#title {
     width: 125px;
     display: inline-block;
     margin-right: 20px;
+    overflow: hidden;
 }
 
 #calendar-view {
@@ -190,17 +191,35 @@ h1#title {
 }
 
 .countdown-wrapper div p:first-child {
+    background: #BB292D;
     border-bottom: 1px solid #222;
+    position: relative;
     font-weight: 800;
     padding: 10px 0;
     font-size: 1.5em;
+    z-index: 10;
 }
 
 .countdown-wrapper div p:nth-child(2) {
-
+    position: relative;
+    -webkit-transition: all .5s ease;
     font-size: 3.5em;
+    z-index: 5;
 }
 
+@-webkit-keyframes scroll {
+    50.0% {
+        -webkit-transform: translateY(100px);
+    }
+    50.1% {
+        visibility: hidden;
+        -webkit-transform: translateY(-100px);
+    }
+}
+
+.countdown-wrapper div:hover p:nth-child(2){
+    -webkit-animation: scroll .5s 1;
+}
 
 /* ==========================================================================
    DETAILS-SECTION
@@ -221,6 +240,158 @@ h1#title {
 
 .details-wrapper #stuffs li {
 
+}
+
+/* ==========================================================================
+   VENUE SECTION
+   ========================================================================== */
+
+.venue-wrapper {
+    font-family: 'Vollkorn', serif;
+    padding: 100px 0;
+}
+
+.venue-details {
+    float: left;
+    width: 53%;
+    border-right: 1px solid rgb(70, 70, 70);
+    text-align: right;
+    margin-top: -20px;
+    padding-right: 15px;
+}
+
+.venue-details th {
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    padding: 2px 0 10px;
+}
+
+.venue-details td {
+    border-bottom: 1px solid white;
+    padding-bottom: 13px;
+}
+
+.venue-details tr:last-child td {
+    border: none;
+}
+
+.venue-map {
+    float: right;
+}
+
+.venue-map small {
+    display: none;
+}
+
+
+/* ==========================================================================
+   RSVP SECTION
+   ========================================================================== */
+
+.rsvp-button-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#no, #yes {
+    display: inline-block;
+    position: relative;
+    margin: auto;
+    font-size: 1.2em;
+    color: white;
+    margin-right: 10px;
+    text-shadow: 0 0 2px white;
+}
+
+#no, #yes {
+    border: none;  
+    padding:  15px 60px;
+}
+
+#no {
+    background: #CA2828;
+    box-shadow: 0px 3px 1px #800707, 0px 2px 6px #222, 0px 0px 50px rgba(0, 0, 0, 0.19) inset;
+}
+
+#no:active {
+    top: 2px;
+    box-shadow: 0px 1px 1px #800707, 0px 1px 2px #222, 0px 0px 50px rgba(0, 0, 0, 0.19) inset;
+}
+
+#yes {
+    background: #55911E;
+    box-shadow: 0px 3px 1px #3A4D2B, 0px 2px 6px #222, 0px 0px 50px rgba(0, 0, 0, 0.19) inset;
+}
+
+#yes:active {
+    top: 2px;
+    box-shadow: 0px 1px 1px #3A4D2B, 0px 1px 2px #222, 0px 0px 50px rgba(0, 0, 0, 0.19) inset;
+}
+
+#RSVP {
+    padding: 10px 0;
+    font-family: 'vellkorn', serif;
+    font-size: 2em;
+    margin-top: 0;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+}
+
+.rsvp-message {
+    border-top: 1px solid #4D4D4D;
+    border-bottom: 1px solid #4D4D4D;
+    padding: 10px 20px;
+    width: 75%;
+    margin: 0px auto;
+    text-align: center;
+    font-family: 'vallkorn', serif;
+    display: none;
+}
+
+#rsvp-no, #rsvp-yes p {
+    font-size: 2.5em;
+}
+
+
+#rsvp-no {
+    display: none;
+}
+
+#rsvp-yes {
+    display: none;
+    padding-bottom: 60px;
+}
+
+#rsvp-yes form {
+    text-align: left;
+}
+
+#rsvp-yes form h3 {
+    margin: 10px 0 0;
+    padding: 0;
+    line-height: 0em;
+    font-style: italic;
+}
+
+#rsvp-yes form input[type="text"] {
+    background: transparent;
+    font-style: italic;
+    font-family: 'vallkorn', serif;    
+    border: none;
+    border-bottom: 1px dashed #444;
+    padding: 0 10px;
+    text-align: center;
+}
+
+#rsvp-yes form input[type="submit"] {
+    border: 1px solid #494949;
+    padding: 1px 10px;
+    margin-left: 30px;
+    background: transparent;
 }
 
 /* ==========================================================================

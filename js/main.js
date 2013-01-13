@@ -1,3 +1,8 @@
+var	days_	= $("#days p:last-child"),
+	hours_	= $("#hours p:last-child"),
+	mins_	= $("#mins p:last-child"),
+	secs_	= $("#secs p:last-child");
+
 function Timer(days, hours, mins, secs) {
 	this.days	= parseInt(days,10);
 	this.hours	= parseInt(hours,10);
@@ -8,11 +13,6 @@ function Timer(days, hours, mins, secs) {
 	};
 };
 
-var CDTimer = new Timer(
-	$("#days p:last-child").text(),
-	$("#hours p:last-child").text(),
-	$("#mins p:last-child").text(),
-	$("#secs p:last-child").text()
-	);
+var CDTimer = new Timer(days_.text(),hours_.text(),mins_.text(),secs_.text());
 
 CDTimer.print();
