@@ -114,3 +114,36 @@ $("#yes").click(function () {
 $("#no").click(function () {
     $("#rsvp-no").slideDown("fast");
 });
+
+/**
+RSVP Attedees listing
+**/
+
+function refreshNames() {
+    $.getJSON('attendeeNames.php', function (data) {
+        var nameList = "";
+        for (var i in data) {
+            nameList += "<span class='attendee-names'>" + data[i] + "</span> \n"
+        }
+        $(".attendees tr:nth-child(2) td").html(nameList);
+    });
+}
+
+refreshNames();
+
+/**
+RSVP Form Handling
+**/
+
+//Sending Form Data by AJAX
+$('#attendee-name input[type="submit"]').click(function (evt) {
+    evt.preventDefault();
+    $.ajax({
+        type: "POST",
+        url: "hackathon_register.php",
+        data: $('form#attendee-name').serialize(),
+        success: function (data) {
+            refreshNames();
+        }
+    });
+});

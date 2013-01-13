@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Web Appa Hackathon 2013</title>
-    <meta name="description" content="">
+    <meta name="description" content="Creativesands Wep Apps Hackathon 2013 is a 3 day event facilitating the attendees to develop web apps using HTML5 standards">
     <meta name="viewport" content="width=device-width">
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -33,7 +33,7 @@
                 <div class="countdown-wrapper">
                     <div id="calendar-view">
                         <p>Jan <span class="thin">2013</span></p>
-                        <p>17</p>
+                        <p>21</p>
                     </div>
                     <div id="days">
                         <p>Days</p>
@@ -131,8 +131,6 @@
                     <div id="google-map">
                         <!-- GOOGLE MAPS -->
                         <iframe width="400" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=+&amp;q=jaaga+bangalore&amp;ie=UTF8&amp;hq=jaaga&amp;hnear=Bangalore,+Bengaluru+Urban,+Karnataka&amp;t=m&amp;ll=12.958306,77.592916&amp;spn=0.020911,0.034246&amp;z=14&amp;output=embed"></iframe>
-                        <br />
-                        <small><a href="https://maps.google.co.in/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=+&amp;q=jaaga+bangalore&amp;ie=UTF8&amp;hq=jaaga&amp;hnear=Bangalore,+Bengaluru+Urban,+Karnataka&amp;t=m&amp;ll=12.958306,77.592916&amp;spn=0.020911,0.034246&amp;z=14" style="color: #0000FF; text-align: left">View Larger Map</a></small>
                     </div>
                 </div>
             </div>
@@ -154,7 +152,7 @@
                             <span class="shout">See you when the timer counts down to ZERO</span>
                         </p>
                         <br />
-                        <form action="attendees.php" id="attendee-name">
+                        <form action="hackathon_register.php" method="post" id="attendee-name">
                             <h3>Declaration:</h3>
                             <br>
                             I,
@@ -171,7 +169,7 @@
                             <br />
                             <strong>Would you like to ask/say something:</strong>
                             <br />
-                            <textarea cols="70" rows="3"></textarea><br />
+                            <textarea cols="70" rows="3" name="query"></textarea><br />
                             <input type="submit" value="OK">
                         </form>
                     </div>
@@ -183,24 +181,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
-                                <span class="attendee-names">Sandeep S Kumar</span>
-                                <span class="attendee-names">Sankeerna Kedlaya</span>
-                                <span class="attendee-names">Arun Francis</span>
+                                <!--List of names as JSON via GET method-->
                             </td>
                         </tr>
                     </table>
