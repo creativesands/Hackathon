@@ -7,7 +7,7 @@
     	// echo "DB Selected <br>";
     }
 
-    $name = $_POST['name'];
+    $name = addslashes($_POST['name']);
     
     if($_POST['laptop'] == "on") {
     	$laptop = 1;
@@ -23,17 +23,17 @@
     	$dongle = 0;
     }
     
-    $query = $_POST['query'];
+    $query = addslashes($_POST['query']);
 
     $sql = "INSERT into hackathon_attendees
     		(name, laptop, dongle, query) 
     		VALUES ('$name','$laptop' ,'$dongle', '$query')";
 
     if(mysql_query($sql, $con)){
-    	// echo "Query Success! \n";
+    	echo "Query Success! \n";
     }
-    // else echo "Query Failed! \n";
+    else echo "Query Failed! \n";
 
-    // printf("%s\n%s\n%s\n%s",$name, $laptop, $dongle, $_POST['query']);
-    
+    printf("%s\n%s\n%s\n%s",$name, $laptop, $dongle, $_POST['query']);
+
 ?>

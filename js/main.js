@@ -108,7 +108,9 @@ $("#no, #yes").click(function () {
 });
 
 $("#yes").click(function () {
-    $("#rsvp-yes").slideDown("fast");
+    $("#rsvp-yes").slideDown("fast", function () {
+        $("#attendee-name input:first").focus();
+    });
 });
 
 $("#no").click(function () {
@@ -138,12 +140,20 @@ RSVP Form Handling
 //Sending Form Data by AJAX
 $('#attendee-name input[type="submit"]').click(function (evt) {
     evt.preventDefault();
-    $.ajax({
-        type: "POST",
-        url: "hackathon_register.php",
-        data: $('form#attendee-name').serialize(),
-        success: function (data) {
-            refreshNames();
-        }
-    });
+    //Form Validation
+    if (!$("#attendee-name input:first").val()) {
+        $("#attendee-name input:first").css("border-bottom-color","red").focus();
+    }
+    //Send data by AJAX
+    else {
+        $.ajax({
+            type: "POST",
+            url: "hackathon_register.php",
+            data: $('form#attendee-name').serialize(),
+            success: function (data) {
+                refreshNames();
+                $('#attendee-name').fadeOut("slow");
+            }
+        });
+    }
 });

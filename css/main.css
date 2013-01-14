@@ -239,8 +239,9 @@ h1#title {
     text-transform: uppercase
 }
 
-.details-wrapper #stuffs li {
-
+.details-wrapper a {
+    color: #008686;
+    text-decoration: none;
 }
 
 /* ==========================================================================
@@ -353,6 +354,10 @@ h1#title {
     font-size: 3.5em;
 }
 
+#rsvp-no small {
+    font-size: 12pt;
+    color: #81817D; 
+}
 
 #rsvp-no {
     display: none;
@@ -363,7 +368,7 @@ h1#title {
 }
 
 #rsvp-yes {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     display: none;
 }
@@ -386,7 +391,6 @@ h1#title {
     border: none;
     border-bottom: 1px dashed #444;
     padding: 0 10px;
-    text-align: center;
     font-family: 'Vollkorn', serif;
 }
 
@@ -434,6 +438,65 @@ h1#title {
 
 .rsvp-wrapper .attendee-names:last-child::after {
     content: "";
+}
+
+
+/* ==========================================================================
+   About the author
+   ========================================================================== */
+
+.about-author-wrapper {
+    display: block;
+}
+
+.author-details {
+    font-family: 'Vollkorn', serif;
+    color: beige;
+    float: right;
+    width: 75%;
+    border-left: 1px solid beige;
+    padding-left: 10px;
+}
+
+.author-details h2 {
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 150px;
+    padding-top: 5px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+footer {
+    font-family: 'Vollkorn', serif;
+    background: #12151F;
+    color: #2C6C79;
+
+    font-size: .95em;
+    position: absolute;
+    width: 100%;
+}
+
+footer P {
+    text-align: right;
+    margin: 5px;
+    padding: 0 30px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
 }
 
 /* ==========================================================================
