@@ -144,6 +144,9 @@ $('#attendee-name input[type="submit"]').click(function (evt) {
     if (!$("#attendee-name input:first").val()) {
         $("#attendee-name input:first").css("border-bottom-color","red").focus();
     }
+    else if (!$("#attendee-name input[type='email']").val()) {
+        $("#attendee-name input[type='email']").css("border-bottom-color", "red").focus();
+    }
     //Send data by AJAX
     else {
         $.ajax({

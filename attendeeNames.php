@@ -2,8 +2,9 @@
     <?php
 		
 	    $con = mysql_connect("localhost","root","sand");
+	    // $con = mysql_connect("localhost","divlorg_cs","efyufs`1tboz");
 
-	    if(mysql_select_db("creativesands")){
+	    if(mysql_select_db("divlorg_cs")){
 	    	// echo "DB Selected <br>";
 	    }
 
