@@ -70,7 +70,7 @@ function Timer(numberOfSeconds, daysTag, hoursTag, minsTag, secsTag) {
     }
 }
 
-var hackathonTimeStamp = 1358760600000; //Mon, 21 Jan 2013 09:30:00 GMT 1358760600000
+var hackathonTimeStamp = 1358740800000; //Mon, 21 Jan 2013 09:30:00 GMT 1358740800000
 var nowTimeStamp = new Date().getTime(); //Current Timers
 
 if (hackathonTimeStamp > nowTimeStamp) {
