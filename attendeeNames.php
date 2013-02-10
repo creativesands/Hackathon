@@ -1,8 +1,7 @@
-
     <?php
 		
 	    $con = mysql_connect("localhost","root","sand");
-	    // $con = mysql_connect("localhost","divlorg_cs","efyufs`1tboz");
+	    // $con = mysql_connect("localhost","d******_cs","*********");
 
 	    if(mysql_select_db("divlorg_cs")){
 	    	// echo "DB Selected <br>";
